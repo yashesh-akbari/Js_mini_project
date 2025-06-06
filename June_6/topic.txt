@@ -1,0 +1,26 @@
+time:1-1.5h
+topic:	Variables, Data types	
+
+mini project 
+
+o Console-based Quiz (input/output)
+o user_profile title(console,desktop display)
+
+time:1-1.5h	
+topic:Operators, Conditions	
+
+mini project:
+
+o Age Checker App (if/else)(Javascript)
+o Grade System App(if/else)(Html,Javascript)
+o Login_system App(if/else)(Html,Javascript)
+
+time:2-2.5h	
+topic:Loops (for, while), Arrays
+
+mini project:
+
+o Number Guessing Game
+
+2h	Functions	Calculator with 4 buttons
+2h	DOM + Events	Button click color changer

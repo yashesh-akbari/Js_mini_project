@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="userForm">
+      <label>Enter a Name:</label>
+      <input
+        type="text"
+        placeholder="Enter Name here..."
+        name="u_name"
+        id="u_name"
+        required
+      />
+      <br />
+      <label>Enter the Age:</label>
+      <input
+        type="number"
+        name="age"
+        id="age"
+        required
+        placeholder="Enter Age here..."
+      />
+      <br />
+      <label>Enter the cityName:</label>
+      <input
+        type="text"
+        name="city"
+        id="city"
+        placeholder="Enter City here..."
+      />
+      <br />
+      <button type="submit">submit</button>
+      <p id="demo"></p>
+    </form>
+    <script>
+      document
+        .getElementById("userForm")
+        .addEventListener("submit", (event) => {
+          event.preventDefault();
+          let name = document.getElementById("u_name").value;
+          let age_number = document.getElementById("age").value;
+          let age = parseFloat(age_number);
+          let city = document.getElementById("city").value;
+
+          // document.write("Hi, my name is "+name+". I am "+age+" years old and I live in "+city);
+
+          // alert(
+          //   "Hi, my name is " +
+          //     name +
+          //     ". I am " +
+          //     age +
+          //     " years old and I live in " +
+          //     city
+          // );
+
+          document.getElementById("demo").innerHTML =
+            "Hi, my name is " +
+            name +
+            ". I am " +
+            age +
+            " years old and I live in " +
+            city;
+        });
+    </script>
+  </body>
+</html>
