@@ -22,5 +22,16 @@ mini project:
 
 o Number Guessing Game
 
-2h	Functions	Calculator with 4 buttons
-2h	DOM + Events	Button click color changer
+time:2h	
+topic:Functions
+
+mini project:
+	
+o Calculator with 4 buttons
+
+time:2h	
+topic:DOM + Events
+
+mini project:
+	
+o Button click color changer

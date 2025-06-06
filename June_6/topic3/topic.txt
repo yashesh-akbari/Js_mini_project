@@ -1,0 +1,120 @@
+Sure! Let's break down **Loops** (`for`, `while`) and **Arrays** in simple terms — these are key parts of JavaScript and most programming languages.
+
+---
+
+## ✅ 1. **Arrays**
+
+An **array** is a container that holds **multiple values** in a single variable.
+
+### 🔹 Example:
+
+```javascript
+let fruits = ["apple", "banana", "mango"];
+```
+
+### 🔹 Key Points:
+
+* Arrays use **square brackets** `[]`.
+* Values are stored in **order** (index starts from 0).
+* You can access values using their index:
+
+  ```javascript
+  console.log(fruits[0]); // "apple"
+  ```
+
+### 🔹 Common Operations:
+
+```javascript
+fruits.push("orange");    // Add to end
+fruits.pop();             // Remove from end
+fruits.unshift("kiwi");   // Add to beginning
+fruits.shift();           // Remove from beginning
+```
+
+---
+
+## ✅ 2. **Loops**
+
+**Loops** are used to **repeat** a block of code **multiple times**.
+
+### ✅ a. **For Loop**
+
+Used when you know how many times to repeat.
+
+### 🔹 Syntax:
+
+```javascript
+for (let i = 0; i < 5; i++) {
+  console.log(i);
+}
+```
+
+### 🔹 Example with Array:
+
+```javascript
+let fruits = ["apple", "banana", "mango"];
+
+for (let i = 0; i < fruits.length; i++) {
+  console.log(fruits[i]);
+}
+```
+
+---
+
+### ✅ b. **While Loop**
+
+Used when you **don't know** in advance how many times to loop.
+
+### 🔹 Syntax:
+
+```javascript
+let i = 0;
+while (i < 5) {
+  console.log(i);
+  i++;
+}
+```
+
+---
+
+### ✅ c. **Do...While Loop**
+
+Runs at **least once**, even if the condition is false.
+
+```javascript
+let i = 0;
+do {
+  console.log(i);
+  i++;
+} while (i < 5);
+```
+
+---
+
+## 📌 Quick Comparison:
+
+| Feature      | `for` Loop                   | `while` Loop                 |
+| ------------ | ---------------------------- | ---------------------------- |
+| Use when     | You know how many times      | You don’t know how many      |
+| Structure    | Compact                      | More flexible                |
+| Runs minimum | 0 times (if condition false) | 0 times (if condition false) |
+
+---
+
+## ✅ Example: Loop through array with `for` and `while`
+
+```javascript
+let fruits = ["apple", "banana", "mango"];
+
+// using for loop
+for (let i = 0; i < fruits.length; i++) {
+  console.log(fruits[i]);
+}
+
+// using while loop
+let i = 0;
+while (i < fruits.length) {
+  console.log(fruits[i]);
+  i++;
+}
+```
