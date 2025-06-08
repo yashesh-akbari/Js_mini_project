@@ -1,0 +1,103 @@
+Sure! Let's break down **DOM** and **Events** in JavaScript in a simple and clear way.
+
+---
+
+## ✅ 1. What is the **DOM**?
+
+**DOM** stands for **Document Object Model**.
+
+When a web page is loaded, the browser converts the **HTML** into a **tree-like structure** of **objects**. This structure is called the **DOM**.
+
+### Example:
+
+```html
+<html>
+  <body>
+    <h1>Hello</h1>
+    <button>Click me</button>
+  </body>
+</html>
+```
+
+This becomes a tree where:
+
+* `document` is the root object
+* `document.body` is the `<body>`
+* `document.body.children[0]` is the `<h1>`
+
+### In JS:
+
+```javascript
+console.log(document);               // Whole HTML document
+console.log(document.body);          // <body> element
+console.log(document.querySelector("button")); // First <button>
+```
+
+So with DOM, **JavaScript can interact with HTML elements**.
+
+---
+
+## ✅ 2. What are **Events** in JavaScript?
+
+An **event** is something that happens in the browser — like:
+
+* Clicking a button
+* Typing in an input
+* Moving the mouse
+* Loading the page
+
+You can **listen for these events** and **run JavaScript code** when they happen.
+
+---
+
+## ✅ 3. How to Handle Events?
+
+You use **event listeners** in JS.
+
+### Example: Button click
+
+```html
+<button id="myBtn">Click me</button>
+<p id="result"></p>
+
+<script>
+  let btn = document.getElementById("myBtn");
+  let res = document.getElementById("result");
+
+  btn.addEventListener("click", function() {
+    res.innerText = "You clicked the button!";
+  });
+</script>
+```
+
+### Breakdown:
+
+* `getElementById` gets the button
+* `addEventListener("click", function)` waits for a click
+* When clicked, it changes the `<p>` text
+
+---
+
+## ✅ Common Events:
+
+| Event Type  | Description           |
+| ----------- | --------------------- |
+| `click`     | Mouse click           |
+| `mouseover` | Mouse over an element |
+| `keydown`   | Key is pressed        |
+| `submit`    | Form submitted        |
+| `change`    | Input value changed   |
+
+---
+
+## ✅ Summary:
+
+| Concept            | Meaning                                          |
+| ------------------ | ------------------------------------------------ |
+| **DOM**            | A way for JS to access and change HTML elements  |
+| **Event**          | Something the user or browser does (e.g., click) |
+| **Event Listener** | JS function that runs when an event happens      |
+
+---
+
+Would you like to see a small project using DOM + Events like a counter, calculator, or todo list?

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calculter</title>
+    <style>
+      body {
+        height: 350px;
+        width: 200px;
+        border: 1px solid black;
+        padding: 20px;
+        margin-left: 40%;
+      }
+      #formsubmit {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      button {
+        height: 30px;
+        width: 50px;
+        margin: 5px;
+      }
+      #demo {
+        border: 1px solid black;
+        height: 20px;
+        width: 180px;
+        padding-left: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>calculator</h1>
+    <p id="demo">0</p>
+    <div id="formsubmit">
+      <button
+        onclick="
+      arr='0';
+      document.getElementById('demo').innerHTML=arr"
+      >
+        c
+      </button>
+      <button
+        onclick="
+      arr=arr+'1';
+      document.getElementById('demo').innerHTML=arr"
+      >
+        1
+      </button>
+      <button
+        onclick="
+      arr=arr+'2';
+      document.getElementById('demo').innerHTML=arr"
+      >
+        2
+      </button>
+      <button
+        onclick="
+      arr=arr+'+';
+      document.getElementById('demo').innerHTML=arr"
+      >
+        +
+      </button>
+      <button
+        onclick="
+      arr=arr+'3';
+      document.getElementById('demo').innerHTML=arr"
+      >
+        3
+      </button>
+      <button
+        onclick="
+      arr=arr+'4';
+      document.getElementById('demo').innerHTML=arr"
+      >
+        4
+      </button>
+      <button
+        onclick="
+      arr=arr+'-';
+      document.getElementById('demo').innerHTML=arr"
+      >
+        -
+      </button>
+      <button
+        onclick="
+      arr=arr+'5';
+      document.getElementById('demo').innerHTML=arr"
+      >
+        5
+      </button>
+      <button
+        onclick="
+      arr=arr+'6';
+      document.getElementById('demo').innerHTML=arr"
+      >
+        6
+      </button>
+      <button
+        onclick="
+      arr=arr+'*';
+      document.getElementById('demo').innerHTML=arr"
+      >
+        *
+      </button>
+      <button
+        onclick="
+      arr=arr+'7';
+      document.getElementById('demo').innerHTML=arr"
+      >
+        7
+      </button>
+      <button
+        onclick="
+      arr=arr+'8';
+      document.getElementById('demo').innerHTML=arr"
+      >
+        8
+      </button>
+      <button
+        onclick="
+      arr=arr+'/';
+      document.getElementById('demo').innerHTML=arr"
+      >
+        /
+      </button>
+      <button
+        onclick="
+      arr=arr+'9';
+      document.getElementById('demo').innerHTML=arr"
+      >
+        9
+      </button>
+      <button
+        onclick="
+      arr=arr+'0';
+      document.getElementById('demo').innerHTML=arr"
+      >
+        0
+      </button>
+      <div
+        style="
+          display: flex;
+          justify-items: center;
+          justify-content: center;
+          text-align: center;
+          margin-left: 30%;
+        "
+      >
+        <button
+          type="submit"
+          onclick="
+      let result=eval(arr);
+      arr=result;
+      document.getElementById('demo').innerHTML=arr;
+      "
+        >
+          =
+        </button>
+      </div>
+    </div>
+    <script>
+      let arr = "0";
+      document.getElementById("demo").innerHTML = arr;
+    </script>
+  </body>
+</html>

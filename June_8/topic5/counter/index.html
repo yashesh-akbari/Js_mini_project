@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="increae_button">increase button</button>
+    <button id="reset">reset button</button>
+    <button id="decrease">decreament button</button>
+    <p id="counter">count value: 0</p>
+    <script>
+      let arr = parseInt(localStorage.getItem("count")) || 0;
+      document
+        .getElementById("increae_button")
+        .addEventListener("click", () => {
+          arr = arr + 1;
+          localStorage.setItem("count", arr);
+          let saveCounter = localStorage.getItem("count");
+          document.getElementById("counter").innerHTML =
+            "count value: " + saveCounter;
+        });
+
+      document.getElementById("reset").addEventListener("click", () => {
+        arr = 0;
+        localStorage.setItem("count", arr);
+        let saveCounter = localStorage.getItem("count");
+        document.getElementById("counter").innerHTML =
+          "count value: " + saveCounter;
+      });
+
+      document.getElementById("decrease").addEventListener("click", () => {
+        arr = parseInt(localStorage.getItem("count") || 0);
+        arr = arr - 1;
+        localStorage.setItem("count", arr);
+        let saveCounter = localStorage.getItem("count");
+        document.getElementById("counter").innerHTML =
+          "count value: " + saveCounter;
+      });
+
+      window.onload = () => {
+        let savecounter = localStorage.getItem("count");
+        if (savecounter) {
+          document.getElementById("counter").innerHTML =
+            "count value: " + savecounter;
+        }
+      };
+    </script>
+  </body>
+</html>
