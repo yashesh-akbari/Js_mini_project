@@ -3,37 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Notes List</title>
   </head>
   <body>
     <form id="formsubmit">
-      <input type="text" id="text_note" />
-      <button type="submit">submit</button>
+      <input type="text" id="text_note" required />
+      <button type="submit">Submit</button>
     </form>
-    <p id="demo"></p>
+
+    <ul id="demo"></ul>
 
     <script>
-      let obj = [];
-      let values;
+      let arr = JSON.parse(localStorage.getItem("value")) || [];
+
+      const updatelist = () => {
+        const answer = arr
+          .map((value, index) => `<li key=${index}>${value}</li>`)
+          .join("");
+        document.getElementById("demo").innerHTML = answer;
+      };
+
+      // Initial load
+      window.onload = () => {
+        updatelist();
+      };
+
+      // Form submission
       document
         .getElementById("formsubmit")
         .addEventListener("submit", (event) => {
           event.preventDefault();
-          let note = document.getElementById("text_note").value;
-          obj.push(note);
-          localStorage.setItem("notes", JSON.stringify(obj));
+          const input = document.getElementById("text_note");
+          const values = input.value.trim();
 
-          values = JSON.parse(localStorage.getItem("notes"));
-          document.getElementById("demo").innerHTML =`<ul>values.map(
-            (value,index) => <li key={index}>value</li></ul>
-          )`;
+          if (values) {
+            arr.push(values);
+            localStorage.setItem("value", JSON.stringify(arr));
+            updatelist();
+            input.value = ""; // Clear input
+          }
         });
-        window.onload=(
-          values=JSON.parse(localStorage.getItem("notes"));
-          document.getElementById("demo").innerHTML =`<ul>values.map(
-            (value,index) => <li key={index}>value</li></ul>
-          )`;
-        );
     </script>
   </body>
 </html>
